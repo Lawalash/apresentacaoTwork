@@ -4,12 +4,12 @@ import { Sparkles, Gem, Rocket, Mail, Phone, Globe } from 'lucide-react';
 
 export const Slide5_Closing: React.FC = () => {
   return (
-    <div className="h-full flex flex-col items-center justify-center p-12 bg-gradient-to-br from-slate-900 to-blue-900 text-white relative overflow-hidden">
+    <div className="h-full flex flex-col items-center justify-center p-12 bg-gradient-to-br from-[#1b102d] to-[#AD8DF2] text-white relative overflow-hidden">
       
       {/* Decorative Background */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-         <div className="absolute top-10 left-10 text-blue-300"><Sparkles size={40} /></div>
-         <div className="absolute bottom-20 right-20 text-yellow-300"><Gem size={60} /></div>
+         <div className="absolute top-10 left-10 text-[#AD8DF2]"><Sparkles size={40} /></div>
+         <div className="absolute bottom-20 right-20 text-[#F2D98D]"><Gem size={60} /></div>
       </div>
 
       <motion.div 
@@ -19,14 +19,14 @@ export const Slide5_Closing: React.FC = () => {
         className="text-center max-w-4xl z-10"
       >
         <div className="flex justify-center mb-6">
-           <div className="bg-white/10 p-4 rounded-full backdrop-blur-md border border-white/20">
-             <Rocket size={48} className="text-white" />
+           <div className="bg-white/10 p-4 rounded-full backdrop-blur-md border border-[#AD8DF2]/40">
+             <Rocket size={48} className="text-[#F2D98D]" />
            </div>
         </div>
         
         <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Muito Obrigado!</h1>
         
-        <p className="text-xl md:text-2xl text-blue-100 font-light leading-relaxed mb-12">
+        <p className="text-xl md:text-2xl text-[#F2D98D] font-light leading-relaxed mb-12">
           "Organizando a operação digital da TWork para vender com mais segurança, automação e clareza."
         </p>
 
@@ -41,10 +41,10 @@ export const Slide5_Closing: React.FC = () => {
                initial={{ y: 20, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ delay: 0.4 + (idx * 0.15) }}
-               className="bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors"
+               className="bg-[#AD8DF2]/10 border border-[#AD8DF2]/30 p-6 rounded-xl hover:bg-[#AD8DF2]/15 transition-colors"
              >
                 <div className="text-2xl mb-2">{item.icon}</div>
-                <div className="text-xs uppercase tracking-widest text-blue-300 font-bold mb-1">{item.label}</div>
+                <div className="text-xs uppercase tracking-widest text-[#F2D98D] font-bold mb-1">{item.label}</div>
                 <div className="font-semibold text-lg">{item.value}</div>
              </motion.div>
            ))}

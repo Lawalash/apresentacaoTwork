@@ -13,7 +13,7 @@ export const Slide1_Intro: React.FC = () => {
         className="flex justify-between items-start border-b border-slate-100 pb-6"
       >
         <div>
-          <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
+          <span className="bg-[#AD8DF2]/15 text-[#AD8DF2] text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
             Apresentação
           </span>
           <h1 className="text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
@@ -37,13 +37,13 @@ export const Slide1_Intro: React.FC = () => {
         transition={{ delay: 0.2, duration: 0.5 }}
         className="my-8"
       >
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-white shadow-lg">
+        <div className="bg-gradient-to-r from-[#AD8DF2] to-[#B79BF2] rounded-2xl p-8 text-white shadow-lg">
           <h2 className="text-3xl font-bold mb-1">Loja Online</h2>
-          <h3 className="text-xl text-blue-100 font-semibold mb-4">TWork</h3>
+          <h3 className="text-xl text-[#F2D98D] font-semibold mb-4">TWork</h3>
           <p className="text-xl font-medium leading-relaxed max-w-3xl mb-4">
             "Integração entre Bling, site e Shopee para organizar estoque, catálogo e vendas em múltiplos canais."
           </p>
-          <p className="text-blue-100 text-sm max-w-2xl opacity-90">
+          <p className="text-[#F2D98D] text-sm max-w-2xl opacity-90">
             Apresentação do projeto de integração e automação da operação digital da TWork, conectando produtos, estoque e pedidos em um fluxo único, simples de gerenciar.
           </p>
         </div>
@@ -66,7 +66,7 @@ export const Slide1_Intro: React.FC = () => {
           >
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-white rounded-lg shadow-sm">
-                <card.icon className="w-5 h-5 text-blue-600" />
+                <card.icon className="w-5 h-5 text-[#AD8DF2]" />
               </div>
               <div>
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">{card.title}</h4>
