@@ -1,39 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
-
 /* ===================================
-   VARIÁVEIS E RESET
+   VARIÁVEIS E CORES TK TWORK
 =================================== */
 
 .slide01 {
-  /* Paleta da marca */
-  --ilpi-gold: #AD8DF2;             /* primária */
-  --ilpi-gold-strong: #B79BF2;      /* secundária */
-  --ilpi-brown: #F2D98D;            /* destaque claro */
-  --ilpi-brown-dark: #D99543;       /* CTA e acento forte */
-  --ilpi-light: #f9f7ff;
+  /* Paleta TK twork */
+  --tk-purple: #AD8DF2;
+  --tk-purple-light: #B79BF2;
+  --tk-gold: #F2D98D;
+  --tk-amber: #D99543;
 
-  /* Offsets da logo (controle X e Y) */
-  --logo-offset-x: -40px;  /* mexe no eixo X (esquerda/direita) */
-  --logo-offset-y: -20px;  /* mexe no eixo Y (cima/baixo) */
-
-  /* Cores gerais */
-  --color-primary: #f8fafc;
+  /* Cores complementares */
+  --color-slate-50: #f8fafc;
   --color-slate-600: #475569;
   --color-slate-700: #334155;
   --color-slate-800: #1e293b;
-  --color-indigo-600: #4f46e5;
-  --color-indigo-700: #4338ca;
-  --color-blue-600: #2563eb;
-  --color-blue-400: #60a5fa;
-  --color-purple-400: #c084fc;
-  --color-amber-400: #fbbf24;
+  --color-white: #ffffff;
 
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #f9f7ff 0%, #f3ecff 45%, #fff7ef 100%);
+  background: linear-gradient(135deg, #faf9fc 0%, #f5f1ff 45%, #fffbf5 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ===================================
@@ -51,44 +40,46 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .slide01__bg-orb--1 {
   width: 400px;
   height: 400px;
   top: 0;
-  left: -80px;
-  background: rgba(173, 141, 242, 0.35);
+  left: -100px;
+  background: var(--tk-purple);
   animation: float 20s ease-in-out infinite;
 }
 
 .slide01__bg-orb--2 {
-  width: 350px;
-  height: 350px;
-  bottom: 0;
-  right: -80px;
-  background: rgba(183, 155, 242, 0.45);
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  right: -100px;
+  background: var(--tk-amber);
+  opacity: 0.15;
   animation: float-delay 25s ease-in-out infinite;
 }
 
 .slide01__bg-orb--3 {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(242, 217, 141, 0.18);
+  background: var(--tk-purple-light);
+  opacity: 0.1;
 }
 
 .slide01__grid-pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.04;
+  opacity: 0.03;
   background-image:
-    linear-gradient(rgba(173, 141, 242, 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(173, 141, 242, 0.35) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(var(--tk-purple) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tk-purple) 1px, transparent 1px);
+  background-size: 50px 50px;
   pointer-events: none;
 }
 
@@ -98,132 +89,212 @@
 
 .slide01__container {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;        /* antes era center */
   justify-content: center;
-  padding: 2rem 1.5rem 3.5rem;
+  padding: 3rem 2rem 3.5rem;      /* um pouco mais de padding em cima */
 }
 
 .slide01__wrapper {
   width: 100%;
-  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  /* remove height: 100% se existir */
 }
 
 .slide01__content {
-  height: 100%;
+  /* remove height: 100% se existir */
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: center;
+  gap: 2.5rem;
+  align-items: flex-start;        /* antes estava centralizando tudo */
 }
 
+
 /* ===================================
-   COLUNA ESQUERDA - CONTEÚDO PRINCIPAL
+   COLUNA ESQUERDA - CONTEÚDO
 =================================== */
 
 .slide01__main {
-  position: relative;              /* importante pro ::before */
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.75rem;
   animation: fade-in 0.8s ease-out forwards;
-  overflow: visible;
+  z-index: 1;
 }
 
-/* Logo da ILPI como marca d'água no fundo da coluna esquerda */
-.slide01__main::before {
-  content: '';
+/* Logo TK como marca d'água */
+.slide01__logo-watermark {
   position: absolute;
-  width: 680px;                    /* tamanho da marca d'água */
-  height: 680px;
-  top: var(--logo-offset-y);       /* controla posição Y */
-  left: var(--logo-offset-x);      /* controla posição X */
-  background-image: url("./imagens/slide%201.jpeg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  opacity: 0.06;                   /* quão clara fica a logo */
+  top: -80px;
+  left: -60px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.04;
 }
 
-/* garante que o conteúdo fique acima da logo */
+.slide01__logo-text {
+  font-size: 300px;
+  font-weight: 900;
+  color: var(--tk-purple);
+  line-height: 1;
+}
+
 .slide01__main > * {
   position: relative;
   z-index: 1;
 }
 
-
+/* Tag superior */
 .slide01__tag-wrapper {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .slide01__tag-line {
   width: 48px;
-  height: 1px;
-  background: linear-gradient(to right, var(--ilpi-gold), transparent);
+  height: 2px;
+  background: linear-gradient(to right, var(--tk-purple), transparent);
 }
 
 .slide01__tag {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   letter-spacing: 0.2em;
-  color: var(--ilpi-brown);
+  color: var(--tk-amber);
   text-transform: uppercase;
 }
 
-/* Barra de marcas (ILPI + A2 Data) */
+/* ===================================
+   BARRA DE MARCAS COM CONEXÃO
+=================================== */
 
 .slide01__brand-bar {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.25rem;
-  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: nowrap;
 }
 
 .slide01__brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.slide01__brand-logo-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
 }
 
 .slide01__brand-logo {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 0.75rem;
-  background: #f2f2f2;
-  padding: 4px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
+  background: white;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(173, 141, 242, 0.25);
+  position: relative;
+  z-index: 2;
+}
+
+/* Pulsos de conexão nas logos */
+.slide01__connection-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--tk-purple);
+  z-index: 1;
+}
+
+.slide01__connection-pulse--start {
+  animation: pulse-out 2s ease-in-out infinite;
+}
+
+.slide01__connection-pulse--end {
+  animation: pulse-in 2s ease-in-out infinite;
+}
+
+/* Linha de conexão animada entre as logos */
+.slide01__brand-connection {
+  position: relative;
+  width: 120px;
+  height: 2px;
+  margin: 0 1rem;
+  flex-shrink: 0;
+}
+
+.slide01__connection-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--tk-purple) 0%,
+    var(--tk-purple-light) 50%,
+    var(--tk-amber) 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(173, 141, 242, 0.6);
+}
+
+/* Partículas animadas na linha */
+.slide01__connection-particle {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tk-purple-light);
+  box-shadow: 0 0 12px var(--tk-purple-light);
+  transform: translateY(-50%);
+}
+
+.slide01__connection-particle--1 {
+  animation: particle-flow 3s ease-in-out infinite;
+}
+
+.slide01__connection-particle--2 {
+  animation: particle-flow 3s ease-in-out infinite 1s;
+}
+
+.slide01__connection-particle--3 {
+  animation: particle-flow 3s ease-in-out infinite 2s;
 }
 
 .slide01__brand-name {
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--ilpi-brown-dark);
+  letter-spacing: 0.15em;
+  color: var(--tk-amber);
 }
 
 .slide01__brand-name--muted {
-  color: var(--color-slate-800);
+  color: var(--color-slate-700);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
 }
 
-.slide01__brand-divider {
-  width: 32px;
-  height: 1px;
-  background: linear-gradient(to right, var(--ilpi-brown-dark), transparent);
-  opacity: 0.6;
-}
-
-/* Header (título + subtítulo) */
+/* ===================================
+   HEADER (TÍTULO + SUBTÍTULO)
+=================================== */
 
 .slide01__header {
   display: flex;
@@ -232,115 +303,42 @@
 }
 
 .slide01__title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 900;
   line-height: 1.1;
-  color: var(--ilpi-brown-dark);
+  color: var(--color-slate-800);
   margin: 0;
 }
 
 .slide01__title-highlight {
-  display: inline-block;
+  display: block;
   background: linear-gradient(
     120deg,
-    var(--ilpi-gold),
-    var(--ilpi-gold-strong),
-    var(--ilpi-brown),
-    var(--ilpi-brown-dark),
-    var(--ilpi-light)
+    var(--tk-purple) 0%,
+    var(--tk-purple-light) 30%,
+    var(--tk-amber) 70%,
+    var(--tk-gold) 100%
   );
   -webkit-background-clip: text;
-
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .slide01__subtitle {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--color-slate-800);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-slate-700);
   line-height: 1.6;
   max-width: 700px;
   margin: 0;
 }
 
 .slide01__description {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--color-slate-600);
   line-height: 1.7;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0;
-}
-
-/* ===================================
-   BOTÕES DE AÇÃO
-=================================== */
-
-.slide01__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-top: 1rem;
-}
-
-.slide01__btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 9999px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-
-.slide01__btn--primary {
-  background: linear-gradient(135deg, var(--ilpi-brown-dark), var(--ilpi-gold));
-  color: white;
-  box-shadow: 0 10px 25px rgba(217, 149, 67, 0.35);
-  overflow: hidden;
-}
-
-.slide01__btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(217, 149, 67, 0.5);
-}
-
-
-.slide01__btn-bg {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--ilpi-gold-strong), var(--ilpi-brown-dark));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: inherit;
-}
-
-.slide01__btn--primary:hover .slide01__btn-bg {
-  opacity: 1;
-}
-
-.slide01__btn-text {
-  position: relative;
-  z-index: 1;
-}
-
-.slide01__btn--secondary {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  color: var(--color-slate-700);
-  border: 2px solid rgba(173, 141, 242, 0.2);
-}
-
-.slide01__btn--secondary:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(173, 141, 242, 0.5);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
 /* ===================================
@@ -355,15 +353,26 @@
 }
 
 .slide01__pill {
-  padding: 0.375rem 1rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--ilpi-brown-dark);
-  background: rgba(173, 141, 242, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(173, 141, 242, 0.35);
+  padding: 0.5rem 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
   border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(8px);
   white-space: nowrap;
+}
+
+.slide01__pill--purple {
+  color: var(--tk-purple);
+  background: rgba(173, 141, 242, 0.12);
+  border: 1.5px solid rgba(173, 141, 242, 0.4);
+}
+
+.slide01__pill--amber {
+  color: var(--tk-amber);
+  background: rgba(242, 217, 141, 0.15);
+  border: 1.5px solid rgba(217, 149, 67, 0.4);
 }
 
 /* ===================================
@@ -380,70 +389,102 @@
 
 .slide01__card {
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 1.25rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide01__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 48px rgba(173, 141, 242, 0.2);
+}
+
+.slide01__card--highlight {
+  background: linear-gradient(135deg, rgba(242, 217, 141, 0.15), rgba(255, 255, 255, 0.7));
+  border-color: rgba(217, 149, 67, 0.3);
 }
 
 .slide01__card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .slide01__card-badge {
   padding: 0.25rem 0.75rem;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   border-radius: 9999px;
 }
 
-.slide01__card-badge--visual {
-  background: rgba(173, 141, 242, 0.18);
-  color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(173, 141, 242, 0.55);
-}
-
-.slide01__card-badge--experience {
-  background: rgba(173, 141, 242, 0.18);
-  color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(173, 141, 242, 0.55);
-}
-
+.slide01__card-badge--visual,
+.slide01__card-badge--experience,
 .slide01__card-badge--content {
-  background: rgba(173, 141, 242, 0.18);
-  color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(173, 141, 242, 0.55);
+  background: rgba(173, 141, 242, 0.15);
+  color: var(--tk-purple);
+  border: 1.5px solid rgba(173, 141, 242, 0.4);
 }
 
 .slide01__card-badge--action {
-  background: rgba(242, 217, 141, 0.24);
-  color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(217, 149, 67, 0.6);
+  background: rgba(242, 217, 141, 0.2);
+  color: var(--tk-amber);
+  border: 1.5px solid rgba(217, 149, 67, 0.5);
 }
 
 .slide01__card-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--ilpi-brown-dark);
-  box-shadow: 0 0 8px rgba(173, 141, 242, 0.5);
+  background: linear-gradient(135deg, var(--tk-purple), var(--tk-amber));
+  box-shadow: 0 0 12px rgba(173, 141, 242, 0.6);
+}
+
+.slide01__card-dot--amber {
+  background: linear-gradient(135deg, var(--tk-amber), var(--tk-purple));
+  box-shadow: 0 0 12px rgba(217, 149, 67, 0.6);
+}
+
+.slide01__card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.slide01__card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.slide01__card-icon--purple {
+  background: rgba(173, 141, 242, 0.15);
+  color: var(--tk-purple);
+}
+
+.slide01__card-icon--amber {
+  background: rgba(242, 217, 141, 0.2);
+  color: var(--tk-amber);
+}
+
+.slide01__card-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
 }
 
 .slide01__card-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-slate-800);
   margin: 0 0 0.5rem;
 }
@@ -453,6 +494,37 @@
   color: var(--color-slate-600);
   line-height: 1.6;
   margin: 0;
+}
+
+/* ===================================
+   ELEMENTOS FLUTUANTES
+=================================== */
+
+.slide01__floating-element {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slide01__floating-element--1 {
+  width: 80px;
+  height: 80px;
+  top: 80px;
+  right: 80px;
+  background: rgba(173, 141, 242, 0.15);
+  filter: blur(40px);
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.slide01__floating-element--2 {
+  width: 60px;
+  height: 60px;
+  bottom: 160px;
+  left: 160px;
+  background: rgba(242, 217, 141, 0.15);
+  filter: blur(30px);
+  animation: float-slow 8s ease-in-out infinite 2s;
 }
 
 /* ===================================
@@ -473,7 +545,16 @@
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(-20px, 20px);
+    transform: translate(-25px, 25px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -20px) scale(1.1);
   }
 }
 
@@ -499,6 +580,60 @@
   }
 }
 
+/* Animação de pulso saindo da logo */
+@keyframes pulse-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Animação de pulso chegando na logo */
+@keyframes pulse-in {
+  0% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animação das partículas fluindo */
+@keyframes particle-flow {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0);
+  }
+}
+
 /* ===================================
    RESPONSIVIDADE
 =================================== */
@@ -509,7 +644,7 @@
   }
 
   .slide01__title {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   .slide01__subtitle {
@@ -526,17 +661,13 @@
 }
 
 @media (min-width: 1024px) {
-  .slide01__container {
-    padding: 2rem 3rem 4.5rem;
-  }
-
   .slide01__content {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: 4rem;
   }
 
   .slide01__title {
-    font-size: 5rem;
+    font-size: 5.5rem;
   }
 
   .slide01__cards {
@@ -548,9 +679,10 @@
   }
 }
 
+
 @media (min-width: 1280px) {
   .slide01__title {
-    font-size: 3.4rem;
+    font-size: 4rem;
   }
 
   .slide01__subtitle {
@@ -562,9 +694,31 @@
   }
 }
 
-@media (max-width: 480px) {
-  .slide01__container {
-    padding: 1.5rem 1rem 3rem;
+@media (max-width: 640px) {
+  .slide01__brand-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .slide01__brand-connection {
+    width: 2px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .slide01__connection-line {
+    background: linear-gradient(
+      to bottom,
+      var(--tk-purple) 0%,
+      var(--tk-purple-light) 50%,
+      var(--tk-amber) 100%
+    );
+  }
+
+  .slide01__connection-particle {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .slide01__title {
@@ -574,12 +728,25 @@
   .slide01__subtitle {
     font-size: 1.125rem;
   }
+}
 
-  .slide01__actions {
-    flex-direction: column;
+@keyframes particle-flow-vertical {
+  0% {
+    top: 0%;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
   }
-
-  .slide01__btn {
-    width: 100%;
+  10% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
   }
 }

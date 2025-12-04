@@ -25,6 +25,33 @@ export const Slide03: React.FC = () => {
     }
   ];
 
+  const flowSteps = [
+    {
+      id: 'bling',
+      title: 'Bling',
+      subtitle: 'Cadastro & estoque',
+      description: 'Produtos, variações e quantidades centralizados em um único lugar.'
+    },
+    {
+      id: 'site',
+      title: 'Site TK twork',
+      subtitle: 'Vitrine oficial',
+      description: 'Catálogo organizado, pronto para receber tráfego pago e vendas diretas.'
+    },
+    {
+      id: 'shopee',
+      title: 'Shopee',
+      subtitle: 'Marketplace',
+      description: 'Exposição em grande volume, com preços e estoque sincronizados automaticamente.'
+    },
+    {
+      id: 'cliente',
+      title: 'Cliente final',
+      subtitle: 'Experiência fluida',
+      description: 'Compra em qualquer canal, sem risco de vender o que já acabou.'
+    }
+  ];
+
   return (
     <section className="slide03">
       {/* Elementos decorativos de fundo */}
@@ -46,7 +73,7 @@ export const Slide03: React.FC = () => {
               <div className="slide03__tag-line" />
               <span className="slide03__tag">Estratégia</span>
             </div>
-            <h2 className="slide03__title">O que vamos construir</h2>
+            <h2 className="slide03__title">Arquitetura da operação TK twork</h2>
           </div>
 
           {/* Grid de conteúdo */}
@@ -54,9 +81,10 @@ export const Slide03: React.FC = () => {
             {/* Coluna esquerda - Conteúdo principal */}
             <div className="slide03__main">
               <h3 className="slide03__headline">
-                Integração entre Bling, site e Shopee para uma operação enxuta e organizada.
+                Integração entre Bling, site TK twork e Shopee para uma operação enxuta,
+                organizada e pronta para tráfego pago.
               </h3>
-              
+
               <p className="slide03__text">
                 Vamos mapear e automatizar o fluxo completo da TWork: cadastro de produtos, atualização de estoque e acompanhamento das vendas em todos os canais. A ideia é reduzir atividades manuais, evitar furos de estoque e deixar a operação pronta para escalar.
               </p>
@@ -72,24 +100,39 @@ export const Slide03: React.FC = () => {
               </div>
             </div>
 
-            {/* Coluna direita - Panel */}
+            {/* Coluna direita - Painel com fluxograma */}
             <div className="slide03__panel">
               <div className="slide03__panel-card">
                 <div className="slide03__panel-icon">
                   <LaptopIcon />
                 </div>
-                <p className="slide03__panel-title">Fluxo da operação integrado</p>
+                <p className="slide03__panel-title">Fluxograma da operação digital</p>
                 <p className="slide03__panel-text">
-                  Representação visual do fluxo entre Bling, site e Shopee, destacando os principais pontos de automação e controle de estoque.
+                  Visão do caminho que o produto percorre: do cadastro no Bling até a compra do cliente
+                  final, passando pelo site TK twork e pela Shopee, com tudo sincronizado.
                 </p>
 
-                {/* CTA dentro do card, bem alinhado */}
-                <a href="#" className="slide03__cta" target="_blank" rel="noreferrer">
-                  <span className="slide03__cta-text">Ver fluxo da operação</span>
-                  <span className="slide03__cta-subtitle">Diagrama da integração</span>
-                </a>
+                {/* Fluxograma 1 → 2 → 3 → 4 */}
+                <div className="slide03__flow">
+                  {flowSteps.map((step, index) => (
+                    <div key={step.id} className="slide03__flow-step">
+                      <div className="slide03__flow-node">
+                        <div className="slide03__flow-node-circle">
+                          {index + 1}
+                        </div>
+                      </div>
+                      <div className="slide03__flow-content">
+                        <p className="slide03__flow-title">{step.title}</p>
+                        <p className="slide03__flow-subtitle">{step.subtitle}</p>
+                        <p className="slide03__flow-description">{step.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
+
           </div>
         </div>
       </div>
