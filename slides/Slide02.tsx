@@ -44,14 +44,13 @@ export const Slide02: React.FC = () => {
           <div className="slide02__content">
             <div className="slide02__main">
               <h3 className="slide02__headline">
-                Consultoria e tecnologia para transformar negócios com dados e automação.
+                Consultoria e tecnologia para organizar operações digitais e automatizar vendas.
               </h3>
 
               <p className="slide02__text">
-                A A2 Data Consultoria e Tecnologia é especialista em soluções digitais sob medida
-                para pequenas e médias empresas. Criamos sistemas, dashboards, sites profissionais
-                e processos automatizados com foco em eficiência, simplicidade e vantagem
-                competitiva.
+                A A2 Data Consultoria e Tecnologia é especialista em soluções digitais sob medida para pequenas e médias empresas.
+                Atuamos com integrações entre ERPs como o Bling, lojas virtuais, marketplaces (como a Shopee) e painéis de
+                acompanhamento, sempre com foco em simplicidade, eficiência e visão de dados.
               </p>
 
               {/* Cards de destaque */}
@@ -63,7 +62,7 @@ export const Slide02: React.FC = () => {
                   <div>
                     <p className="slide02__card-title">Eficiência real</p>
                     <p className="slide02__card-text">
-                      Automação para reduzir tarefas manuais e liberar tempo do time.
+                      Automação para reduzir tarefas manuais, como atualização de estoque e cadastro de produtos, liberando tempo para atendimento e estratégia.
                     </p>
                   </div>
                 </div>
@@ -75,7 +74,7 @@ export const Slide02: React.FC = () => {
                   <div>
                     <p className="slide02__card-title">Produtos sob medida</p>
                     <p className="slide02__card-text">
-                      Ferramentas personalizadas que acompanham a estratégia do cliente.
+                      Ferramentas e fluxos personalizados para a realidade da [NOME DA MARCA], sem excesso de complexidade.
                     </p>
                   </div>
                 </div>
@@ -84,12 +83,12 @@ export const Slide02: React.FC = () => {
               {/* Métricas */}
               <div className="slide02__metrics">
                 <div className="slide02__metric">
-                  <p className="slide02__metric-label">Foco em PMEs</p>
-                  <p className="slide02__metric-value">Crescimento com tecnologia</p>
+                  <p className="slide02__metric-label">Crescimento com tecnologia</p>
+                  <p className="slide02__metric-value">Automação aplicada ao dia a dia</p>
                 </div>
                 <div className="slide02__metric">
-                  <p className="slide02__metric-label">Resultados práticos</p>
-                  <p className="slide02__metric-value">Simplicidade e agilidade</p>
+                  <p className="slide02__metric-label">Simplicidade e agilidade</p>
+                  <p className="slide02__metric-value">Integrações que evitam retrabalho</p>
                 </div>
               </div>
             </div>

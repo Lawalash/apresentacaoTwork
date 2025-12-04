@@ -11,17 +11,17 @@ const LaptopIcon: React.FC = () => (
 
 export const Slide03: React.FC = () => {
   const pillars = [
-    { 
-      label: 'Eficiência', 
-      desc: 'CTA fixo e acesso rápido ao WhatsApp e agendamento.' 
+    {
+      label: 'Eficiência',
+      desc: 'Menos tempo atualizando estoque e anúncios, mais tempo focada nas clientes e nos produtos certos.'
     },
-    { 
-      label: 'Automação', 
-      desc: 'Formulários inteligentes e integrações para responder rápido.' 
+    {
+      label: 'Automação',
+      desc: 'Bling como cérebro da operação, atualizando site e Shopee automaticamente a cada venda.'
     },
-    { 
-      label: 'Personalização', 
-      desc: 'Conteúdo e seções destacando diferenciais reais da casa.' 
+    {
+      label: 'Visibilidade',
+      desc: 'Informações centralizadas para enxergar o que mais vende, planejar compras e tomar decisões com base em dados.'
     }
   ];
 
@@ -46,7 +46,7 @@ export const Slide03: React.FC = () => {
               <div className="slide03__tag-line" />
               <span className="slide03__tag">Estratégia</span>
             </div>
-            <h2 className="slide03__title">Proposta do site</h2>
+            <h2 className="slide03__title">O que vamos construir</h2>
           </div>
 
           {/* Grid de conteúdo */}
@@ -54,12 +54,11 @@ export const Slide03: React.FC = () => {
             {/* Coluna esquerda - Conteúdo principal */}
             <div className="slide03__main">
               <h3 className="slide03__headline">
-                Uma landing page moderna, acolhedora e orientada à conversão para a ILPI Aconchego dos Avós.
+                Integração entre Bling, site e Shopee para uma operação enxuta e organizada.
               </h3>
               
               <p className="slide03__text">
-                Estruturamos a página para transmitir confiança imediata, reforçar cuidados humanizados e simplificar o contato. 
-                O design usa nossos tons de azul com animações sutis para guiar a jornada.
+                Vamos mapear e automatizar o fluxo completo da [NOME DA MARCA]: cadastro de produtos, atualização de estoque e acompanhamento das vendas em todos os canais. A ideia é reduzir atividades manuais, evitar furos de estoque e deixar a operação pronta para escalar.
               </p>
 
               {/* Pilares */}
@@ -79,15 +78,15 @@ export const Slide03: React.FC = () => {
                 <div className="slide03__panel-icon">
                   <LaptopIcon />
                 </div>
-                <p className="slide03__panel-title">Experiência pronta para navegar</p>
+                <p className="slide03__panel-title">Fluxo da operação integrado</p>
                 <p className="slide03__panel-text">
-                  Link direto para o protótipo funcional com transições suaves e CTAs em destaque.
+                  Representação visual do fluxo entre Bling, site e Shopee, destacando os principais pontos de automação e controle de estoque.
                 </p>
 
                 {/* CTA dentro do card, bem alinhado */}
-                <a href="http://localhost:5173/" className="slide03__cta" target="_blank" rel="noreferrer">
-                  <span className="slide03__cta-text">Ver mockup ao vivo</span>
-                  <span className="slide03__cta-subtitle">localhost:5173</span>
+                <a href="#" className="slide03__cta" target="_blank" rel="noreferrer">
+                  <span className="slide03__cta-text">Ver fluxo da operação</span>
+                  <span className="slide03__cta-subtitle">Diagrama da integração</span>
                 </a>
               </div>
             </div>
