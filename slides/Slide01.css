@@ -28,13 +28,12 @@
   --color-purple-400: #c084fc;
   --color-amber-400: #fbbf24;
 
-  position: relative;
-  min-height: 100vh;
+  position: fixed;
+  inset: 0;
   width: 100%;
+  height: 100%;
   overflow: hidden;
-  background: radial-gradient(circle at 20% 20%, rgba(173, 141, 242, 0.12), transparent 40%),
-    radial-gradient(circle at 80% 10%, rgba(183, 155, 242, 0.12), transparent 38%),
-    linear-gradient(135deg, #f9f7ff 0%, #f5f0ff 48%, #fffaf2 100%);
+  background: linear-gradient(135deg, #f9f7ff 0%, #f3ecff 45%, #fff7ef 100%);
 }
 
 /* ===================================
@@ -51,8 +50,8 @@
 .slide01__bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(50px);
-  opacity: 0.18;
+  filter: blur(80px);
+  opacity: 0.3;
 }
 
 .slide01__bg-orb--1 {
@@ -61,6 +60,7 @@
   top: 0;
   left: -80px;
   background: rgba(173, 141, 242, 0.35);
+  animation: float 20s ease-in-out infinite;
 }
 
 .slide01__bg-orb--2 {
@@ -69,6 +69,7 @@
   bottom: 0;
   right: -80px;
   background: rgba(183, 155, 242, 0.45);
+  animation: float-delay 25s ease-in-out infinite;
 }
 
 .slide01__bg-orb--3 {
@@ -83,7 +84,7 @@
 .slide01__grid-pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.04;
   background-image:
     linear-gradient(rgba(173, 141, 242, 0.35) 1px, transparent 1px),
     linear-gradient(90deg, rgba(173, 141, 242, 0.35) 1px, transparent 1px);
@@ -97,6 +98,7 @@
 
 .slide01__container {
   position: relative;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,11 +107,13 @@
 
 .slide01__wrapper {
   width: 100%;
+  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .slide01__content {
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -133,15 +137,15 @@
 .slide01__main::before {
   content: '';
   position: absolute;
-  width: 520px;                    /* tamanho da marca d'água */
-  height: 520px;
+  width: 680px;                    /* tamanho da marca d'água */
+  height: 680px;
   top: var(--logo-offset-y);       /* controla posição Y */
   left: var(--logo-offset-x);      /* controla posição X */
   background-image: url("./imagens/slide%201.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  opacity: 0.04;                   /* quão clara fica a logo */
+  opacity: 0.06;                   /* quão clara fica a logo */
   pointer-events: none;
   z-index: 0;
 }
@@ -182,11 +186,6 @@
   margin-top: 0.75rem;
   margin-bottom: 0.25rem;
   flex-wrap: wrap;
-  padding: 0.85rem 1rem;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(173, 141, 242, 0.25);
-  border-radius: 0.85rem;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
 }
 
 .slide01__brand {
@@ -200,9 +199,9 @@
   height: 40px;
   object-fit: contain;
   border-radius: 0.75rem;
-  background: #f7f3ff;
+  background: #f2f2f2;
   padding: 4px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
 }
 
 .slide01__brand-name {
@@ -237,7 +236,7 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #201b2d;
+  color: var(--ilpi-brown-dark);
   margin: 0;
 }
 
@@ -375,22 +374,23 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  animation: fade-in-delay 0.6s ease-out 0.1s forwards;
+  animation: fade-in-delay 0.8s ease-out 0.2s forwards;
   opacity: 0;
 }
 
 .slide01__card {
   padding: 1.5rem;
-  background: #ffffff;
-  border: 1px solid rgba(173, 141, 242, 0.2);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 1.25rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
 .slide01__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .slide01__card-header {
@@ -438,7 +438,7 @@
   height: 10px;
   border-radius: 50%;
   background: var(--ilpi-brown-dark);
-  box-shadow: 0 0 6px rgba(173, 141, 242, 0.45);
+  box-shadow: 0 0 8px rgba(173, 141, 242, 0.5);
 }
 
 .slide01__card-title {
