@@ -5,12 +5,12 @@
 =================================== */
 
 .slide03 {
-  /* Paleta ILPI */
-  --ilpi-gold: #F2D06B;
-  --ilpi-gold-strong: #BF8C2C;
-  --ilpi-brown: #8C5C03;
-  --ilpi-brown-dark: #734002;
-  --ilpi-light: #F2F2F2;
+  /* Paleta da marca */
+  --ilpi-gold: #AD8DF2;
+  --ilpi-gold-strong: #B79BF2;
+  --ilpi-brown: #F2D98D;
+  --ilpi-brown-dark: #D99543;
+  --ilpi-light: #f9f7ff;
 
   /* Cores gerais */
   --color-primary: #f8fafc;
@@ -23,7 +23,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #f8fafc 0%, #f5f0e5 45%, #e0e7ff 100%);
+  background: linear-gradient(135deg, #f9f7ff 0%, #f3ecff 45%, #fff7ef 100%);
 }
 
 /* ===================================
@@ -49,7 +49,7 @@
   height: 400px;
   top: 0;
   left: -80px;
-  background: rgba(242, 208, 107, 0.35);
+  background: rgba(173, 141, 242, 0.35);
   animation: float 20s ease-in-out infinite;
 }
 
@@ -58,7 +58,7 @@
   height: 350px;
   bottom: 0;
   right: -80px;
-  background: rgba(224, 231, 255, 0.45);
+  background: rgba(183, 155, 242, 0.45);
   animation: float-delay 25s ease-in-out infinite;
 }
 
@@ -68,7 +68,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(242, 242, 242, 0.2);
+  background: rgba(242, 217, 141, 0.18);
 }
 
 .slide03__grid-pattern {
@@ -76,8 +76,8 @@
   inset: 0;
   opacity: 0.04;
   background-image:
-    linear-gradient(rgba(191, 140, 44, 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(191, 140, 44, 0.35) 1px, transparent 1px);
+    linear-gradient(rgba(173, 141, 242, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 141, 242, 0.35) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
 }
