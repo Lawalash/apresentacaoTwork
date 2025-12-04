@@ -11,7 +11,7 @@ export const Slide3_Strategy: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         className="mb-8"
       >
-        <span className="text-emerald-600 font-semibold tracking-wide uppercase text-sm bg-emerald-50 px-2 py-1 rounded">Estratégia</span>
+        <span className="text-[#AD8DF2] font-semibold tracking-wide uppercase text-sm bg-[#AD8DF2]/10 px-2 py-1 rounded">Estratégia</span>
         <h2 className="text-4xl font-extrabold text-slate-900 mt-3">O que vamos construir</h2>
         <h3 className="text-xl text-slate-500 mt-2 font-medium">Integração entre Bling, site e Shopee para uma operação enxuta e organizada.</h3>
       </motion.div>
@@ -24,7 +24,7 @@ export const Slide3_Strategy: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <p className="text-slate-700 text-lg leading-relaxed border-l-4 border-blue-500 pl-4">
+          <p className="text-slate-700 text-lg leading-relaxed border-l-4 border-[#AD8DF2] pl-4">
             Vamos mapear e automatizar o fluxo completo da TWork, do cadastro ao faturamento, para evitar furos de estoque e deixar a operação pronta para escalar.
           </p>
           
@@ -33,9 +33,9 @@ export const Slide3_Strategy: React.FC = () => {
             <p className="text-sm text-slate-600 mb-4">
               Representação visual do fluxo entre Bling, site e Shopee, destacando os principais pontos de automação e controle de estoque.
             </p>
-            <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-medium transition-colors w-full justify-center shadow-lg shadow-blue-200">
+            <button className="flex items-center gap-2 bg-gradient-to-r from-[#AD8DF2] to-[#B79BF2] hover:from-[#B79BF2] hover:to-[#AD8DF2] text-white px-5 py-3 rounded-lg font-medium transition-colors w-full justify-center shadow-lg shadow-[0_10px_25px_rgba(173,141,242,0.35)]">
               <span>Ver fluxo da operação</span>
-              <span className="text-xs opacity-75 border-l border-blue-400 pl-2 ml-1">Diagrama da integração</span>
+              <span className="text-xs opacity-75 border-l border-[#B79BF2] pl-2 ml-1">Diagrama da integração</span>
             </button>
           </div>
         </motion.div>
@@ -57,8 +57,8 @@ export const Slide3_Strategy: React.FC = () => {
             <div className="flex justify-between items-center mb-12">
                {/* ERP */}
                <div className="flex flex-col items-center">
-                 <div className="w-24 h-24 bg-white rounded-full shadow-lg border-4 border-orange-500 flex items-center justify-center mb-3 z-10">
-                    <Database className="w-10 h-10 text-orange-600" />
+                 <div className="w-24 h-24 bg-white rounded-full shadow-lg border-4 border-[#D99543] flex items-center justify-center mb-3 z-10">
+                    <Database className="w-10 h-10 text-[#D99543]" />
                  </div>
                  <span className="font-bold text-slate-800">Bling ERP</span>
                  <span className="text-xs text-slate-500">Mestre de Estoque</span>
@@ -80,10 +80,10 @@ export const Slide3_Strategy: React.FC = () => {
 
                 {/* Integration Hub */}
                 <div className="flex flex-col items-center">
-                 <div className="w-20 h-20 bg-blue-600 rounded-xl shadow-xl flex items-center justify-center mb-3 z-10">
+                 <div className="w-20 h-20 bg-[#AD8DF2] rounded-xl shadow-xl flex items-center justify-center mb-3 z-10">
                     <RefreshCw className="w-10 h-10 text-white animate-spin-slow" style={{ animationDuration: '10s' }} />
                  </div>
-                 <span className="font-bold text-blue-800">Automação</span>
+                 <span className="font-bold text-white/90">Automação</span>
                </div>
 
                {/* Animation Arrows */}
@@ -94,11 +94,11 @@ export const Slide3_Strategy: React.FC = () => {
                {/* Channels */}
                <div className="flex flex-col gap-6">
                   <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-slate-200">
-                    <div className="p-2 bg-orange-100 rounded text-orange-600"><ShoppingBag size={18} /></div>
+                    <div className="p-2 bg-[#F2D98D]/40 rounded text-[#D99543]"><ShoppingBag size={18} /></div>
                     <span className="font-bold text-sm text-slate-700">Shopee</span>
                   </div>
                   <div className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-slate-200">
-                    <div className="p-2 bg-indigo-100 rounded text-indigo-600"><Globe size={18} /></div>
+                    <div className="p-2 bg-[#AD8DF2]/20 rounded text-[#AD8DF2]"><Globe size={18} /></div>
                     <span className="font-bold text-sm text-slate-700">Site Próprio</span>
                   </div>
                </div>

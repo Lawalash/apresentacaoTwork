@@ -12,7 +12,7 @@ export const Slide2_About: React.FC = () => {
         animate={{ opacity: 1, x: 0 }}
         className="mb-10"
       >
-        <span className="text-blue-600 font-semibold tracking-wide uppercase text-sm">Sobre nós</span>
+        <span className="text-[#AD8DF2] font-semibold tracking-wide uppercase text-sm">Sobre nós</span>
         <h2 className="text-4xl font-extrabold text-slate-900 mt-2">Quem é a A2 Data?</h2>
         <h3 className="text-xl text-slate-500 mt-2 font-medium">Consultoria e tecnologia para organizar operações digitais e automatizar vendas.</h3>
       </motion.div>
@@ -41,9 +41,9 @@ export const Slide2_About: React.FC = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.6 + (idx * 0.1) }}
-                className="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-3 rounded-lg font-medium text-sm"
+                className="flex items-center gap-2 bg-[#AD8DF2]/10 text-[#AD8DF2] px-4 py-3 rounded-lg font-medium text-sm"
                >
-                 <CheckCircle className="w-4 h-4 flex-shrink-0" />
+                 <CheckCircle className="w-4 h-4 flex-shrink-0 text-[#AD8DF2]" />
                  {badge}
                </motion.div>
              ))}
@@ -62,7 +62,7 @@ export const Slide2_About: React.FC = () => {
               <Zap size={80} />
             </div>
             <h4 className="text-xl font-bold mb-3 flex items-center gap-2">
-              <Zap className="text-yellow-400 w-5 h-5" /> Eficiência real
+              <Zap className="text-[#D99543] w-5 h-5" /> Eficiência real
             </h4>
             <p className="text-slate-300 text-sm leading-relaxed">
               Automação para reduzir tarefas manuais, como atualização de estoque e cadastro de produtos, liberando tempo para atendimento e estratégia.
@@ -79,7 +79,7 @@ export const Slide2_About: React.FC = () => {
               <Puzzle size={80} />
             </div>
             <h4 className="text-xl font-bold mb-3 flex items-center gap-2 text-slate-800">
-              <Puzzle className="text-blue-600 w-5 h-5" /> Produtos sob medida
+              <Puzzle className="text-[#AD8DF2] w-5 h-5" /> Produtos sob medida
             </h4>
             <p className="text-slate-600 text-sm leading-relaxed">
               Ferramentas e fluxos personalizados para a realidade da TWork, sem excesso de complexidade.
