@@ -51,8 +51,8 @@ export default function App() {
 
   return (
     <div className="w-screen h-screen bg-slate-200 flex items-center justify-center overflow-hidden">
-      {/* Presentation Container (Aspect Ratio 16:9 approx) */}
-      <div className="relative w-full h-full md:w-[1280px] md:h-[720px] bg-white shadow-2xl md:rounded-2xl overflow-hidden flex flex-col">
+      {/* Presentation Container (Full Width & Height) */}
+      <div className="relative w-full h-full bg-white shadow-2xl overflow-hidden flex flex-col">
         
         <AnimatePresence mode='wait' custom={direction}>
           <motion.div
@@ -70,8 +70,8 @@ export default function App() {
 
         {/* Progress Bar (Top) */}
         <div className="absolute top-0 left-0 h-1 bg-slate-100 w-full z-50">
-           <motion.div 
-             className="h-full bg-blue-600"
+           <motion.div
+             className="h-full bg-[#AD8DF2]"
              initial={{ width: 0 }}
              animate={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
              transition={{ duration: 0.3 }}
