@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* ===================================
+   VARIÁVEIS E RESET
+=================================== */
+
+.slide01 {
+  /* Paleta ILPI */
+  --ilpi-gold: #F2D06B;
+  --ilpi-gold-strong: #BF8C2C;
+  --ilpi-brown: #8C5C03;
+  --ilpi-brown-dark: #734002;
+  --ilpi-light: #F2F2F2;
+
+  /* Offsets da logo (controle X e Y) */
+  --logo-offset-x: -40px;  /* mexe no eixo X (esquerda/direita) */
+  --logo-offset-y: -20px;  /* mexe no eixo Y (cima/baixo) */
+
+  /* Cores gerais */
+  --color-primary: #f8fafc;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-indigo-600: #4f46e5;
+  --color-indigo-700: #4338ca;
+  --color-blue-600: #2563eb;
+  --color-blue-400: #60a5fa;
+  --color-purple-400: #c084fc;
+  --color-amber-400: #fbbf24;
+
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8fafc 0%, #f5f0e5 45%, #e0e7ff 100%);
+}
+
+/* ===================================
+   BACKGROUND DECORATIVO
+=================================== */
+
+.slide01__bg-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.slide01__bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+.slide01__bg-orb--1 {
+  width: 400px;
+  height: 400px;
+  top: 0;
+  left: -80px;
+  background: rgba(242, 208, 107, 0.35);
+  animation: float 20s ease-in-out infinite;
+}
+
+.slide01__bg-orb--2 {
+  width: 350px;
+  height: 350px;
+  bottom: 0;
+  right: -80px;
+  background: rgba(224, 231, 255, 0.45);
+  animation: float-delay 25s ease-in-out infinite;
+}
+
+.slide01__bg-orb--3 {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(242, 242, 242, 0.2);
+}
+
+.slide01__grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(rgba(191, 140, 44, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(191, 140, 44, 0.35) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ===================================
+   CONTAINER PRINCIPAL
+=================================== */
+
+.slide01__container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem 3.5rem;
+}
+
+.slide01__wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.slide01__content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ===================================
+   COLUNA ESQUERDA - CONTEÚDO PRINCIPAL
+=================================== */
+
+.slide01__main {
+  position: relative;              /* importante pro ::before */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fade-in 0.8s ease-out forwards;
+  overflow: visible;
+}
+
+/* Logo da ILPI como marca d'água no fundo da coluna esquerda */
+.slide01__main::before {
+  content: '';
+  position: absolute;
+  width: 680px;                    /* tamanho da marca d'água */
+  height: 680px;
+  top: var(--logo-offset-y);       /* controla posição Y */
+  left: var(--logo-offset-x);      /* controla posição X */
+  background-image: url("./imagens/slide%201.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.06;                   /* quão clara fica a logo */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* garante que o conteúdo fique acima da logo */
+.slide01__main > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.slide01__tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slide01__tag-line {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(to right, var(--ilpi-gold), transparent);
+}
+
+.slide01__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--ilpi-brown);
+  text-transform: uppercase;
+}
+
+/* Barra de marcas (ILPI + A2 Data) */
+
+.slide01__brand-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.slide01__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slide01__brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  background: #f2f2f2;
+  padding: 4px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+
+.slide01__brand-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ilpi-brown-dark);
+}
+
+.slide01__brand-name--muted {
+  color: var(--color-slate-800);
+}
+
+.slide01__brand-divider {
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to right, var(--ilpi-brown-dark), transparent);
+  opacity: 0.6;
+}
+
+/* Header (título + subtítulo) */
+
+.slide01__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.slide01__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ilpi-brown-dark);
+  margin: 0;
+}
+
+.slide01__title-highlight {
+  display: inline-block;
+  background: linear-gradient(
+    120deg,
+    var(--ilpi-gold),
+    var(--ilpi-gold-strong),
+    var(--ilpi-brown),
+    var(--ilpi-brown-dark),
+    var(--ilpi-light)
+  );
+  -webkit-background-clip: text;
+
+}
+
+.slide01__subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-slate-800);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0;
+}
+
+.slide01__description {
+  font-size: 1rem;
+  color: var(--color-slate-600);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* ===================================
+   BOTÕES DE AÇÃO
+=================================== */
+
+.slide01__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.slide01__btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.slide01__btn--primary {
+  background: linear-gradient(135deg, var(--ilpi-brown), var(--ilpi-gold-strong));
+  color: white;
+  box-shadow: 0 10px 25px rgba(115, 64, 2, 0.35);
+  overflow: hidden;
+}
+
+.slide01__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(115, 64, 2, 0.5);
+}
+
+.slide01__btn-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--ilpi-brown-dark), var(--ilpi-gold-strong));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.slide01__btn--primary:hover .slide01__btn-bg {
+  opacity: 1;
+}
+
+.slide01__btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+.slide01__btn--secondary {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  color: var(--color-slate-700);
+  border: 2px solid rgba(226, 232, 240, 0.8);
+}
+
+.slide01__btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(191, 140, 44, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ===================================
+   PILLS INFORMATIVOS
+=================================== */
+
+.slide01__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.slide01__pill {
+  padding: 0.375rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ilpi-brown-dark);
+  background: rgba(242, 208, 107, 0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(191, 140, 44, 0.45);
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+/* ===================================
+   COLUNA DIREITA - CARDS
+=================================== */
+
+.slide01__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  animation: fade-in-delay 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.slide01__card {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.slide01__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.slide01__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.slide01__card-badge {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+}
+
+.slide01__card-badge--visual {
+background: rgba(242, 208, 107, 0.22);
+  color: var(--ilpi-brown-dark);
+  border: 1px solid rgba(191, 140, 44, 0.65);
+}
+
+.slide01__card-badge--experience {
+ background: rgba(242, 208, 107, 0.22);
+  color: var(--ilpi-brown-dark);
+  border: 1px solid rgba(191, 140, 44, 0.65);
+}
+
+.slide01__card-badge--content {
+background: rgba(242, 208, 107, 0.22);
+  color: var(--ilpi-brown-dark);
+  border: 1px solid rgba(191, 140, 44, 0.65);
+}
+
+.slide01__card-badge--action {
+  background: rgba(242, 208, 107, 0.22);
+  color: var(--ilpi-brown-dark);
+  border: 1px solid rgba(191, 140, 44, 0.65);
+}
+
+.slide01__card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ilpi-brown-dark);
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+}
+
+.slide01__card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin: 0 0 0.5rem;
+}
+
+.slide01__card-text {
+  font-size: 0.875rem;
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===================================
+   ANIMAÇÕES
+=================================== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -30px);
+  }
+}
+
+@keyframes float-delay {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-20px, 20px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (min-width: 768px) {
+  .slide01__container {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .slide01__title {
+    font-size: 4rem;
+  }
+
+  .slide01__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .slide01__description {
+    font-size: 1.125rem;
+  }
+
+  .slide01__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide01__container {
+    padding: 2rem 3rem 4.5rem;
+  }
+
+  .slide01__content {
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+  }
+
+  .slide01__title {
+    font-size: 5rem;
+  }
+
+  .slide01__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .slide01__main {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .slide01__title {
+    font-size: 3.4rem;
+  }
+
+  .slide01__subtitle {
+    font-size: 1.75rem;
+  }
+
+  .slide01__cards {
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide01__container {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .slide01__title {
+    font-size: 2.5rem;
+  }
+
+  .slide01__subtitle {
+    font-size: 1.125rem;
+  }
+
+  .slide01__actions {
+    flex-direction: column;
+  }
+
+  .slide01__btn {
+    width: 100%;
+  }
+}
