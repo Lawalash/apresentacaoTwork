@@ -36,10 +36,10 @@ export const Slide01: React.FC = () => {
                 <div className="slide01__brand">
                   <img
                     src={IlpiLogo}
-                  alt="[NOME DA MARCA]"
+                    alt="TWork"
                     className="slide01__brand-logo"
                   />
-                  <span className="slide01__brand-name">[NOME DA MARCA]</span>
+                  <span className="slide01__brand-name">TWork</span>
                 </div>
 
                 <span className="slide01__brand-divider" />
@@ -61,7 +61,7 @@ export const Slide01: React.FC = () => {
                 <h1 className="slide01__title">
                   Loja Online
                   <br />
-                  <span className="slide01__title-highlight">[NOME DA MARCA]</span>
+                  <span className="slide01__title-highlight">TWork</span>
                 </h1>
 
                 <h2 className="slide01__subtitle">
@@ -71,7 +71,7 @@ export const Slide01: React.FC = () => {
 
               {/* Descrição */}
               <p className="slide01__description">
-                Apresentação do projeto de integração e automação da operação digital da [NOME DA MARCA], conectando produtos,
+                Apresentação do projeto de integração e automação da operação digital da TWork, conectando produtos,
                 estoque e pedidos em um fluxo único, simples de gerenciar.
               </p>
 
