@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* ===================================
+   VARIÁVEIS E RESET
+=================================== */
+
+.slide03 {
+  /* Paleta TK twork */
+  --tk-purple: #AD8DF2;
+  --tk-purple-light: #B79BF2;
+  --tk-gold: #F2D98D;
+  --tk-amber: #D99543;
+  --tk-light: #f9f7ff;
+
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f9f7ff 0%, #f3ecff 45%, #fff7ef 100%);
+}
+
+/* ===================================
+   BACKGROUND DECORATIVO
+=================================== */
+
+.slide03__bg-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.slide03__bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+.slide03__bg-orb--1 {
+  width: 380px;
+  height: 380px;
+  top: 0;
+  left: -80px;
+  background: rgba(173, 141, 242, 0.35);
+  animation: slide03-float 20s ease-in-out infinite;
+}
+
+.slide03__bg-orb--2 {
+  width: 320px;
+  height: 320px;
+  bottom: -40px;
+  right: -80px;
+  background: rgba(183, 155, 242, 0.45);
+  animation: slide03-float-delay 25s ease-in-out infinite;
+}
+
+.slide03__bg-orb--3 {
+  width: 460px;
+  height: 460px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(242, 217, 141, 0.18);
+}
+
+.slide03__grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(rgba(173, 141, 242, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 141, 242, 0.35) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ===================================
+   CONTAINER PRINCIPAL
+=================================== */
+
+.slide03__container {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2.5rem 1.75rem 2.75rem;
+}
+
+.slide03__wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ===================================
+   HEADER DO SLIDE
+=================================== */
+
+.slide03__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: slide03-fade-in 0.8s ease-out forwards;
+}
+
+.slide03__tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.slide03__tag-line {
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(to right, var(--tk-purple), transparent);
+}
+
+.slide03__tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--tk-amber);
+  text-transform: uppercase;
+}
+
+.slide03__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-slate-800);
+  margin: 0;
+}
+
+/* ===================================
+   GRID DE CONTEÚDO
+=================================== */
+
+.slide03__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  align-items: flex-start;
+  animation: slide03-fade-in-delay 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+/* ===================================
+   COLUNA ESQUERDA - CONTEÚDO PRINCIPAL
+=================================== */
+
+.slide03__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.slide03__headline {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--tk-amber);
+  margin: 0;
+}
+
+.slide03__text {
+  font-size: 0.98rem;
+  color: var(--color-slate-600);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===================================
+   PILARES (3 CARDS)
+=================================== */
+
+.slide03__pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.slide03__pillar {
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.slide03__pillar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.slide03__pillar-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.slide03__pillar-text {
+  font-size: 0.86rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ===================================
+   COLUNA DIREITA - PANEL
+=================================== */
+
+.slide03__panel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  animation: slide03-fade-in-delay 0.8s ease-out 0.35s forwards;
+  opacity: 0;
+}
+
+.slide03__panel-card {
+  width: 100%;
+  padding: 1.6rem 1.8rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.slide03__panel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.16);
+}
+
+.slide03__panel-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, var(--tk-purple), var(--tk-purple-light));
+  border-radius: 1.2rem;
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(173, 141, 242, 0.4);
+}
+
+.slide03__panel-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin: 0 0 0.5rem;
+}
+
+.slide03__panel-text {
+  font-size: 0.95rem;
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin: 0 0 1.35rem;
+}
+
+/* ===================================
+   FLUXOGRAMA 1 → 2 → 3 → 4
+=================================== */
+
+.slide03__flow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0.4rem;
+}
+
+/* linha contínua ligando os pontos */
+.slide03__flow::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(173, 141, 242, 0.5),
+    rgba(183, 155, 242, 0.6),
+    rgba(242, 217, 141, 0.75)
+  );
+  z-index: 0;
+}
+
+.slide03__flow-step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.slide03__flow-node {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide03__flow-node-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, var(--tk-gold), var(--tk-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(173, 141, 242, 0.55);
+  position: relative;
+  z-index: 1;
+}
+
+.slide03__flow-content {
+  padding-bottom: 0.3rem;
+}
+
+.slide03__flow-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-slate-800);
+  margin: 0;
+}
+
+.slide03__flow-subtitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--tk-purple);
+  margin: 0.08rem 0 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.slide03__flow-description {
+  font-size: 0.84rem;
+  color: var(--color-slate-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===================================
+   ANIMAÇÕES
+=================================== */
+
+@keyframes slide03-float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(26px, -26px);
+  }
+}
+
+@keyframes slide03-float-delay {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-22px, 22px);
+  }
+}
+
+@keyframes slide03-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide03-fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (min-width: 640px) {
+  .slide03__pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .slide03__container {
+    padding: 2.75rem 2.1rem 3rem;
+  }
+
+  .slide03__title {
+    font-size: 2.7rem;
+  }
+
+  .slide03__headline {
+    font-size: 1.55rem;
+  }
+
+  .slide03__text {
+    font-size: 1.02rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slide03__container {
+    padding: 2.4rem 3rem 3rem;
+  }
+
+  .slide03__content {
+    grid-template-columns: 3fr 2.1fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .slide03__title {
+    font-size: 3rem;
+  }
+
+  .slide03__pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .slide03__headline {
+    font-size: 1.85rem;
+  }
+
+  .slide03__panel-card {
+    padding: 2rem 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide03__container {
+    padding: 1.75rem 1.1rem 2.4rem;
+  }
+
+  .slide03__title {
+    font-size: 2.05rem;
+  }
+
+  .slide03__headline {
+    font-size: 1.25rem;
+  }
+
+  .slide03__pillars {
+    gap: 0.75rem;
+  }
+}
