@@ -34,7 +34,7 @@ export const Slide04: React.FC = () => {
   const recorrente = {
     titulo: 'Parcelas do projeto',
     valor: '10x de R$ 240,00',
-    detalhe: 'Cobrança inicia após a solução estar configurada e em uso pela [NOME DA MARCA].',
+    detalhe: 'Cobrança inicia após a solução estar configurada e em uso pela TK Twork.',
   };
 
   const manutencao = [
@@ -73,7 +73,7 @@ export const Slide04: React.FC = () => {
               <header className="slide04__header">
                 <p className="slide04__eyebrow">Apresentação</p>
                 <h3 className="slide04__title">
-                  Proposta Comercial – Integração Digital [NOME DA MARCA]
+                  Proposta Comercial – Integração Digital TK Twork
                 </h3>
                 <p className="slide04__text">
                   Valores transparentes para estruturar a operação integrada entre Bling, site e Shopee.

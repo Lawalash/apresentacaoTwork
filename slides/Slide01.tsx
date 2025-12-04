@@ -36,10 +36,10 @@ export const Slide01: React.FC = () => {
                 <div className="slide01__brand">
                   <img
                     src={IlpiLogo}
-                  alt="[NOME DA MARCA]"
+                    alt="TK Twork"
                     className="slide01__brand-logo"
                   />
-                  <span className="slide01__brand-name">[NOME DA MARCA]</span>
+                  <span className="slide01__brand-name">TK Twork</span>
                 </div>
 
                 <span className="slide01__brand-divider" />
@@ -59,20 +59,20 @@ export const Slide01: React.FC = () => {
               {/* Título principal */}
               <div className="slide01__header">
                 <h1 className="slide01__title">
-                  Loja Online
+                  Operação Digital
                   <br />
-                  <span className="slide01__title-highlight">[NOME DA MARCA]</span>
+                  <span className="slide01__title-highlight">TK Twork</span>
                 </h1>
 
                 <h2 className="slide01__subtitle">
-                  Integração entre Bling, site e Shopee para organizar estoque, catálogo e vendas em múltiplos canais.
+                  Integração entre Bling, site e Shopee para organizar estoque, catálogo e vendas em múltiplos canais com leveza.
                 </h2>
               </div>
 
               {/* Descrição */}
               <p className="slide01__description">
-                Apresentação do projeto de integração e automação da operação digital da [NOME DA MARCA], conectando produtos,
-                estoque e pedidos em um fluxo único, simples de gerenciar.
+                Apresentação do projeto de integração e automação da operação digital da TK Twork, conectando produtos, estoque
+                e pedidos em um fluxo único, simples de gerenciar.
               </p>
 
               {/* Pills informativos */}

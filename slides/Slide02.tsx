@@ -74,7 +74,7 @@ export const Slide02: React.FC = () => {
                   <div>
                     <p className="slide02__card-title">Produtos sob medida</p>
                     <p className="slide02__card-text">
-                      Ferramentas e fluxos personalizados para a realidade da [NOME DA MARCA], sem excesso de complexidade.
+                      Ferramentas e fluxos personalizados para a realidade da TK Twork, sem excesso de complexidade.
                     </p>
                   </div>
                 </div>

@@ -18,12 +18,13 @@
   --color-slate-700: #334155;
   --color-slate-800: #1e293b;
 
-  position: fixed;
-  inset: 0;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
-  height: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #f9f7ff 0%, #f3ecff 45%, #fff7ef 100%);
+  background: radial-gradient(circle at 20% 20%, rgba(173, 141, 242, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(183, 155, 242, 0.12), transparent 38%),
+    linear-gradient(135deg, #f9f7ff 0%, #f5f0ff 48%, #fffaf2 100%);
 }
 
 /* ===================================
@@ -40,8 +41,8 @@
 .slide04__bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
+  filter: blur(50px);
+  opacity: 0.18;
 }
 
 .slide04__bg-orb--1 {
@@ -50,7 +51,6 @@
   top: 0;
   left: -80px;
   background: rgba(173, 141, 242, 0.35);
-  animation: float 20s ease-in-out infinite;
 }
 
 .slide04__bg-orb--2 {
@@ -59,7 +59,6 @@
   bottom: 0;
   right: -80px;
   background: rgba(183, 155, 242, 0.45);
-  animation: float-delay 25s ease-in-out infinite;
 }
 
 .slide04__bg-orb--3 {
@@ -88,7 +87,6 @@
 
 .slide04__container {
   position: relative;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,8 +241,7 @@
 .slide04__installments {
   padding: 1.25rem;
   background: rgba(173, 141, 242, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(173, 141, 242, 0.25);
+  border: 1px solid rgba(173, 141, 242, 0.2);
   border-radius: 1rem;
 }
 
@@ -282,17 +279,16 @@
 
 .slide04__cost-card {
   padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: #ffffff;
+  border: 1px solid rgba(173, 141, 242, 0.2);
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
 }
 
 .slide04__cost-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
 }
 
 .slide04__cost-inner {
@@ -308,12 +304,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--ilpi-gold), var(--ilpi-gold-strong));
+  background: linear-gradient(135deg, rgba(173, 141, 242, 0.16), rgba(217, 149, 67, 0.28));
   border-radius: 0.75rem;
-  color: #fff;
+  color: var(--color-slate-800);
   font-size: 1.25rem;
   font-weight: 800;
-  box-shadow: 0 4px 12px rgba(173, 141, 242, 0.4);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .slide04__cost-content {
@@ -371,11 +367,10 @@
 
 .slide04__card {
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: #ffffff;
+  border: 1px solid rgba(173, 141, 242, 0.2);
   border-radius: 1.25rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
 .slide04__card-title {
@@ -413,9 +408,8 @@
 
 .slide04__flow {
   padding: 1.5rem;
-  background: rgba(242, 217, 141, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(217, 149, 67, 0.3);
+  background: rgba(242, 217, 141, 0.14);
+  border: 1px solid rgba(217, 149, 67, 0.26);
   border-radius: 1.25rem;
 }
 
