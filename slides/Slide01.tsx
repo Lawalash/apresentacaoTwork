@@ -34,16 +34,12 @@ export const Slide01 = () => {
               {/* Barra de marcas com conexão animada */}
               <div className="slide01__brand-bar">
                 <div className="slide01__brand">
-                  <div className="slide01__brand-logo-wrapper">
-                    <img
-                      src={TKLogo}
-                      alt="TK twork"
-                      className="slide01__brand-logo"
-                    />
-                    {/* Pulso de conexão saindo da logo */}
-                    <div className="slide01__connection-pulse slide01__connection-pulse--start" />
-                  </div>
-                  <span className="slide01__brand-name">TK twork</span>
+                  <img
+                    src={IlpiLogo}
+                    alt="TWork"
+                    className="slide01__brand-logo"
+                  />
+                  <span className="slide01__brand-name">TWork</span>
                 </div>
 
                 {/* Linha de conexão animada entre as logos */}
@@ -75,7 +71,7 @@ export const Slide01 = () => {
                 <h1 className="slide01__title">
                   Loja Online
                   <br />
-                  <span className="slide01__title-highlight">TK twork</span>
+                  <span className="slide01__title-highlight">TWork</span>
                 </h1>
 
                 <h2 className="slide01__subtitle">
@@ -87,10 +83,8 @@ export const Slide01 = () => {
 
               {/* Descrição */}
               <p className="slide01__description">
-                Apresentação do projeto de integração e automação da operação
-                digital da TK twork, conectando produtos, estoque e pedidos em
-                um fluxo único, simples de gerenciar e pronto para receber
-                tráfego qualificado sem bagunçar o operacional.
+                Apresentação do projeto de integração e automação da operação digital da TWork, conectando produtos,
+                estoque e pedidos em um fluxo único, simples de gerenciar.
               </p>
 
               {/* Pills */}

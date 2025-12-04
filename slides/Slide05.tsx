@@ -34,7 +34,7 @@ export const Slide05: React.FC = () => {
           {/* Frase de efeito */}
           <div className="slide05__tagline">
             <p className="slide05__tagline-text">
-              Organizando a operação digital da [NOME DA MARCA] para vender com mais segurança, automação e clareza.
+              Organizando a operação digital da TWork para vender com mais segurança, automação e clareza.
             </p>
           </div>
 
@@ -56,6 +56,6 @@ export const Slide05: React.FC = () => {
 
         </div>
       </div>
-    </section>
-  );
-};
+      </section>
+    );
+  };

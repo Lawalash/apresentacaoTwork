@@ -86,10 +86,7 @@ export const Slide03: React.FC = () => {
               </h3>
 
               <p className="slide03__text">
-                Vamos mapear e automatizar o fluxo completo da TK twork: cadastro de produtos,
-                atualização de estoque e acompanhamento das vendas em todos os canais. A ideia é reduzir
-                atividades manuais, evitar furos de estoque e criar uma base sólida para campanhas de
-                tráfego pago sem bagunçar o operacional.
+                Vamos mapear e automatizar o fluxo completo da TWork: cadastro de produtos, atualização de estoque e acompanhamento das vendas em todos os canais. A ideia é reduzir atividades manuais, evitar furos de estoque e deixar a operação pronta para escalar.
               </p>
 
               {/* Pilares */}
