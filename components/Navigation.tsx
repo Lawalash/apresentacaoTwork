@@ -15,17 +15,17 @@ export const Navigation: React.FC<NavigationProps> = ({ currentSlide, totalSlide
         {currentSlide + 1} / {totalSlides}
       </div>
       <div className="flex gap-2">
-        <button 
+        <button
           onClick={onPrev}
           disabled={currentSlide === 0}
           className="p-3 rounded-full bg-slate-800 text-white shadow-lg hover:bg-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         >
           <ChevronLeft size={20} />
         </button>
-        <button 
+        <button
           onClick={onNext}
           disabled={currentSlide === totalSlides - 1}
-          className="p-3 rounded-full bg-blue-600 text-white shadow-lg shadow-blue-200 hover:bg-blue-500 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          className="p-3 rounded-full bg-[#AD8DF2] text-white shadow-lg shadow-[0_10px_25px_rgba(173,141,242,0.4)] hover:bg-[#B79BF2] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
         >
           <ChevronRight size={20} />
         </button>
