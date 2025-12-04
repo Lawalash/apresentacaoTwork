@@ -1,9 +1,9 @@
 /* ===================================
-   VARIÁVEIS E CORES TK TWORK
+   VARIÁVEIS E CORES TWORK
 =================================== */
 
 .slide01 {
-  /* Paleta TK twork */
+  /* Paleta TWork */
   --tk-purple: #AD8DF2;
   --tk-purple-light: #B79BF2;
   --tk-gold: #F2D98D;
@@ -125,7 +125,7 @@
   z-index: 1;
 }
 
-/* Logo TK como marca d'água */
+/* Logo TWork como marca d'água */
 .slide01__logo-watermark {
   position: absolute;
   top: -80px;

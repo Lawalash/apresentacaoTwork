@@ -34,7 +34,7 @@ export const Slide03: React.FC = () => {
     },
     {
       id: 'site',
-      title: 'Site TK twork',
+      title: 'Site TWork',
       subtitle: 'Vitrine oficial',
       description: 'Catálogo organizado, pronto para receber tráfego pago e vendas diretas.'
     },
@@ -73,7 +73,7 @@ export const Slide03: React.FC = () => {
               <div className="slide03__tag-line" />
               <span className="slide03__tag">Estratégia</span>
             </div>
-            <h2 className="slide03__title">Arquitetura da operação TK twork</h2>
+            <h2 className="slide03__title">Arquitetura da operação TWork</h2>
           </div>
 
           {/* Grid de conteúdo */}
@@ -81,12 +81,12 @@ export const Slide03: React.FC = () => {
             {/* Coluna esquerda - Conteúdo principal */}
             <div className="slide03__main">
               <h3 className="slide03__headline">
-                Integração entre Bling, site TK twork e Shopee para uma operação enxuta,
+                Integração entre Bling, site da TWork e Shopee para uma operação enxuta,
                 organizada e pronta para tráfego pago.
               </h3>
 
               <p className="slide03__text">
-                Vamos mapear e automatizar o fluxo completo da TK twork: cadastro de produtos,
+                Vamos mapear e automatizar o fluxo completo da TWork: cadastro de produtos,
                 atualização de estoque e acompanhamento das vendas em todos os canais. A ideia é reduzir
                 atividades manuais, evitar furos de estoque e criar uma base sólida para campanhas de
                 tráfego pago sem bagunçar o operacional.
@@ -112,7 +112,7 @@ export const Slide03: React.FC = () => {
                 <p className="slide03__panel-title">Fluxograma da operação digital</p>
                 <p className="slide03__panel-text">
                   Visão do caminho que o produto percorre: do cadastro no Bling até a compra do cliente
-                  final, passando pelo site TK twork e pela Shopee, com tudo sincronizado.
+                  final, passando pelo site da TWork e pela Shopee, com tudo sincronizado.
                 </p>
 
                 {/* Fluxograma 1 → 2 → 3 → 4 */}
