@@ -36,10 +36,10 @@ export const Slide01: React.FC = () => {
                 <div className="slide01__brand">
                   <img
                     src={IlpiLogo}
-                    alt="ILPI Aconchego dos Avós"
+                    alt="TK Twork"
                     className="slide01__brand-logo"
                   />
-                  <span className="slide01__brand-name">ILPI Aconchego dos Avós</span>
+                  <span className="slide01__brand-name">TK Twork</span>
                 </div>
 
                 <span className="slide01__brand-divider" />
@@ -59,27 +59,27 @@ export const Slide01: React.FC = () => {
               {/* Título principal */}
               <div className="slide01__header">
                 <h1 className="slide01__title">
-                  ILPI
+                  Operação Digital
                   <br />
-                  <span className="slide01__title-highlight">Aconchego dos Avós</span>
+                  <span className="slide01__title-highlight">TK Twork</span>
                 </h1>
 
                 <h2 className="slide01__subtitle">
-                  Landing page moderna criada pela A2 Data para uma experiência digital acolhedora
+                  Integração entre Bling, site e Shopee para organizar estoque, catálogo e vendas em múltiplos canais com leveza.
                 </h2>
               </div>
 
               {/* Descrição */}
               <p className="slide01__description">
-                Nova identidade com animações suaves, contraste sofisticado e narrativa que apresenta a
-                casa de forma humana, segura e clara.
+                Apresentação do projeto de integração e automação da operação digital da TK Twork, conectando produtos, estoque
+                e pedidos em um fluxo único, simples de gerenciar.
               </p>
 
               {/* Pills informativos */}
               <div className="slide01__pills">
-                <span className="slide01__pill">Landing page moderna</span>
-                <span className="slide01__pill">Experiência acolhedora</span>
-                <span className="slide01__pill">Identidade digital A2 Data</span>
+                <span className="slide01__pill">Integração Bling + Site + Shopee</span>
+                <span className="slide01__pill">Estoque automatizado</span>
+                <span className="slide01__pill">Operação pronta para escalar</span>
               </div>
             </div>
 
@@ -91,10 +91,8 @@ export const Slide01: React.FC = () => {
                   <span className="slide01__card-badge slide01__card-badge--visual">Visual</span>
                   <div className="slide01__card-dot" />
                 </div>
-                <h3 className="slide01__card-title">Capa viva</h3>
-                <p className="slide01__card-text">
-                  Gradientes dinâmicos, tipografia editorial e luz suave para destacar a marca.
-                </p>
+                <h3 className="slide01__card-title">Painel integrado</h3>
+                <p className="slide01__card-text">Visão clara da operação digital em todos os canais de venda.</p>
               </div>
 
               {/* Card Experiência */}
@@ -103,10 +101,8 @@ export const Slide01: React.FC = () => {
                   <span className="slide01__card-badge slide01__card-badge--experience">Experiência</span>
                   <div className="slide01__card-dot" />
                 </div>
-                <h3 className="slide01__card-title">Navegação fluida</h3>
-                <p className="slide01__card-text">
-                  Microinterações e botões destacados para uma jornada intuitiva.
-                </p>
+                <h3 className="slide01__card-title">Fluxo organizado</h3>
+                <p className="slide01__card-text">Do cadastro ao pedido, tudo mapeado e conectado para reduzir retrabalho.</p>
               </div>
 
               {/* Card Conteúdo */}
@@ -115,10 +111,8 @@ export const Slide01: React.FC = () => {
                   <span className="slide01__card-badge slide01__card-badge--content">Conteúdo</span>
                   <div className="slide01__card-dot" />
                 </div>
-                <h3 className="slide01__card-title">Mensagem humana</h3>
-                <p className="slide01__card-text">
-                  História centrada no cuidado familiar e na rotina acolhedora da casa.
-                </p>
+                <h3 className="slide01__card-title">Catálogo consistente</h3>
+                <p className="slide01__card-text">Produtos com informações padronizadas em todas as plataformas.</p>
               </div>
 
               {/* Card Ação */}
@@ -127,10 +121,8 @@ export const Slide01: React.FC = () => {
                   <span className="slide01__card-badge slide01__card-badge--action">Ação</span>
                   <div className="slide01__card-dot" />
                 </div>
-                <h3 className="slide01__card-title">CTA chamativo</h3>
-                <p className="slide01__card-text">
-                  Contato imediato e destaque para agendamento de visita.
-                </p>
+                <h3 className="slide01__card-title">Pronta para crescer</h3>
+                <p className="slide01__card-text">Base tecnológica preparada para campanhas de tráfego pago e expansão.</p>
               </div>
             </div>
           </div>

@@ -34,25 +34,25 @@ export const Slide05: React.FC = () => {
           {/* Frase de efeito */}
           <div className="slide05__tagline">
             <p className="slide05__tagline-text">
-              Transformando <span className="slide05__tagline-highlight">dados em decisões</span> e <span className="slide05__tagline-highlight">tecnologia em resultados</span> para pequenas e médias empresas.
+              Organizando a operação digital da TK Twork para vender com mais segurança, automação e clareza.
             </p>
           </div>
 
           {/* Cards de detalhes opcionais */}
-          <div className="slide05__details">
-            <div className="slide05__detail-item">
-              <p className="slide05__detail-label">Nossa missão</p>
-              <p className="slide05__detail-value">Eficiência real</p>
+            <div className="slide05__details">
+              <div className="slide05__detail-item">
+                <p className="slide05__detail-label">Nossa missão</p>
+              <p className="slide05__detail-value">Organização e eficiência</p>
+              </div>
+              <div className="slide05__detail-item">
+                <p className="slide05__detail-label">Nosso diferencial</p>
+              <p className="slide05__detail-value">Integração de sistemas e visão de dados</p>
+              </div>
+              <div className="slide05__detail-item">
+                <p className="slide05__detail-label">Nosso compromisso</p>
+              <p className="slide05__detail-value">Entrega prática e acompanhamento próximo</p>
+              </div>
             </div>
-            <div className="slide05__detail-item">
-              <p className="slide05__detail-label">Nosso diferencial</p>
-              <p className="slide05__detail-value">Soluções sob medida</p>
-            </div>
-            <div className="slide05__detail-item">
-              <p className="slide05__detail-label">Nosso compromisso</p>
-              <p className="slide05__detail-value">Resultados práticos</p>
-            </div>
-          </div>
 
         </div>
       </div>

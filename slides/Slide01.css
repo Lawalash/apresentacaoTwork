@@ -5,12 +5,12 @@
 =================================== */
 
 .slide01 {
-  /* Paleta ILPI */
-  --ilpi-gold: #F2D06B;
-  --ilpi-gold-strong: #BF8C2C;
-  --ilpi-brown: #8C5C03;
-  --ilpi-brown-dark: #734002;
-  --ilpi-light: #F2F2F2;
+  /* Paleta da marca */
+  --ilpi-gold: #AD8DF2;             /* primária */
+  --ilpi-gold-strong: #B79BF2;      /* secundária */
+  --ilpi-brown: #F2D98D;            /* destaque claro */
+  --ilpi-brown-dark: #D99543;       /* CTA e acento forte */
+  --ilpi-light: #f9f7ff;
 
   /* Offsets da logo (controle X e Y) */
   --logo-offset-x: -40px;  /* mexe no eixo X (esquerda/direita) */
@@ -28,12 +28,13 @@
   --color-purple-400: #c084fc;
   --color-amber-400: #fbbf24;
 
-  position: fixed;
-  inset: 0;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
-  height: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #f8fafc 0%, #f5f0e5 45%, #e0e7ff 100%);
+  background: radial-gradient(circle at 20% 20%, rgba(173, 141, 242, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(183, 155, 242, 0.12), transparent 38%),
+    linear-gradient(135deg, #f9f7ff 0%, #f5f0ff 48%, #fffaf2 100%);
 }
 
 /* ===================================
@@ -50,8 +51,8 @@
 .slide01__bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
+  filter: blur(50px);
+  opacity: 0.18;
 }
 
 .slide01__bg-orb--1 {
@@ -59,8 +60,7 @@
   height: 400px;
   top: 0;
   left: -80px;
-  background: rgba(242, 208, 107, 0.35);
-  animation: float 20s ease-in-out infinite;
+  background: rgba(173, 141, 242, 0.35);
 }
 
 .slide01__bg-orb--2 {
@@ -68,8 +68,7 @@
   height: 350px;
   bottom: 0;
   right: -80px;
-  background: rgba(224, 231, 255, 0.45);
-  animation: float-delay 25s ease-in-out infinite;
+  background: rgba(183, 155, 242, 0.45);
 }
 
 .slide01__bg-orb--3 {
@@ -78,16 +77,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(242, 242, 242, 0.2);
+  background: rgba(242, 217, 141, 0.18);
 }
 
 .slide01__grid-pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.04;
+  opacity: 0.03;
   background-image:
-    linear-gradient(rgba(191, 140, 44, 0.35) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(191, 140, 44, 0.35) 1px, transparent 1px);
+    linear-gradient(rgba(173, 141, 242, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 141, 242, 0.35) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
 }
@@ -98,7 +97,6 @@
 
 .slide01__container {
   position: relative;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,13 +105,11 @@
 
 .slide01__wrapper {
   width: 100%;
-  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .slide01__content {
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
@@ -137,15 +133,15 @@
 .slide01__main::before {
   content: '';
   position: absolute;
-  width: 680px;                    /* tamanho da marca d'água */
-  height: 680px;
+  width: 520px;                    /* tamanho da marca d'água */
+  height: 520px;
   top: var(--logo-offset-y);       /* controla posição Y */
   left: var(--logo-offset-x);      /* controla posição X */
   background-image: url("./imagens/slide%201.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  opacity: 0.06;                   /* quão clara fica a logo */
+  opacity: 0.04;                   /* quão clara fica a logo */
   pointer-events: none;
   z-index: 0;
 }
@@ -186,6 +182,11 @@
   margin-top: 0.75rem;
   margin-bottom: 0.25rem;
   flex-wrap: wrap;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(173, 141, 242, 0.25);
+  border-radius: 0.85rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
 }
 
 .slide01__brand {
@@ -199,9 +200,9 @@
   height: 40px;
   object-fit: contain;
   border-radius: 0.75rem;
-  background: #f2f2f2;
+  background: #f7f3ff;
   padding: 4px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
 
 .slide01__brand-name {
@@ -236,7 +237,7 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
-  color: var(--ilpi-brown-dark);
+  color: #201b2d;
   margin: 0;
 }
 
@@ -297,22 +298,24 @@
   text-decoration: none;
 }
 
+
 .slide01__btn--primary {
-  background: linear-gradient(135deg, var(--ilpi-brown), var(--ilpi-gold-strong));
+  background: linear-gradient(135deg, var(--ilpi-brown-dark), var(--ilpi-gold));
   color: white;
-  box-shadow: 0 10px 25px rgba(115, 64, 2, 0.35);
+  box-shadow: 0 10px 25px rgba(217, 149, 67, 0.35);
   overflow: hidden;
 }
 
 .slide01__btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(115, 64, 2, 0.5);
+  box-shadow: 0 15px 35px rgba(217, 149, 67, 0.5);
 }
+
 
 .slide01__btn-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--ilpi-brown-dark), var(--ilpi-gold-strong));
+  background: linear-gradient(135deg, var(--ilpi-gold-strong), var(--ilpi-brown-dark));
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: inherit;
@@ -331,12 +334,12 @@
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(8px);
   color: var(--color-slate-700);
-  border: 2px solid rgba(226, 232, 240, 0.8);
+  border: 2px solid rgba(173, 141, 242, 0.2);
 }
 
 .slide01__btn--secondary:hover {
   background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(191, 140, 44, 0.5);
+  border-color: rgba(173, 141, 242, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
@@ -357,9 +360,9 @@
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--ilpi-brown-dark);
-  background: rgba(242, 208, 107, 0.18);
+  background: rgba(173, 141, 242, 0.12);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(191, 140, 44, 0.45);
+  border: 1px solid rgba(173, 141, 242, 0.35);
   border-radius: 9999px;
   white-space: nowrap;
 }
@@ -372,23 +375,22 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  animation: fade-in-delay 0.8s ease-out 0.2s forwards;
+  animation: fade-in-delay 0.6s ease-out 0.1s forwards;
   opacity: 0;
 }
 
 .slide01__card {
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: #ffffff;
+  border: 1px solid rgba(173, 141, 242, 0.2);
   border-radius: 1.25rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
 }
 
 .slide01__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
 }
 
 .slide01__card-header {
@@ -408,27 +410,27 @@
 }
 
 .slide01__card-badge--visual {
-background: rgba(242, 208, 107, 0.22);
+  background: rgba(173, 141, 242, 0.18);
   color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(191, 140, 44, 0.65);
+  border: 1px solid rgba(173, 141, 242, 0.55);
 }
 
 .slide01__card-badge--experience {
- background: rgba(242, 208, 107, 0.22);
+  background: rgba(173, 141, 242, 0.18);
   color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(191, 140, 44, 0.65);
+  border: 1px solid rgba(173, 141, 242, 0.55);
 }
 
 .slide01__card-badge--content {
-background: rgba(242, 208, 107, 0.22);
+  background: rgba(173, 141, 242, 0.18);
   color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(191, 140, 44, 0.65);
+  border: 1px solid rgba(173, 141, 242, 0.55);
 }
 
 .slide01__card-badge--action {
-  background: rgba(242, 208, 107, 0.22);
+  background: rgba(242, 217, 141, 0.24);
   color: var(--ilpi-brown-dark);
-  border: 1px solid rgba(191, 140, 44, 0.65);
+  border: 1px solid rgba(217, 149, 67, 0.6);
 }
 
 .slide01__card-dot {
@@ -436,7 +438,7 @@ background: rgba(242, 208, 107, 0.22);
   height: 10px;
   border-radius: 50%;
   background: var(--ilpi-brown-dark);
-  box-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+  box-shadow: 0 0 6px rgba(173, 141, 242, 0.45);
 }
 
 .slide01__card-title {

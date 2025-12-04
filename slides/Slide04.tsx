@@ -20,26 +20,26 @@ const CheckCircleIcon: React.FC<{ className?: string }> = ({ className }) => (
 export const Slide04: React.FC = () => {
   const custosIniciais = [
     {
-      titulo: 'Hospedagem Hostgator (1 ano)',
-      valor: 'R$ 118,75',
-      detalhe: 'Pagamento único para colocar o site no ar.',
+      titulo: 'Taxa de Implantação (35%)',
+      valor: 'R$ 840,00',
+      detalhe: 'Configuração inicial do Bling, integrações com site e Shopee, testes e ajustes de fluxo.',
     },
     {
-      titulo: 'Taxa de Implantação (30%)',
-      valor: 'R$ 240,00',
-      detalhe: 'Ativação, configuração, publicação e integrações.',
+      titulo: 'Licenças de sistemas',
+      valor: 'Contratadas à parte',
+      detalhe: 'Planos do Bling e da plataforma do site são pagos diretamente pela cliente, conforme necessidade.',
     },
   ];
 
   const recorrente = {
-    titulo: 'Desenvolvimento',
-    valor: '10x de R$ 80,00',
-    detalhe: 'Parcelas iniciam após entrega em produção.',
+    titulo: 'Parcelas do projeto',
+    valor: '10x de R$ 240,00',
+    detalhe: 'Cobrança inicia após a solução estar configurada e em uso pela TK Twork.',
   };
 
   const manutencao = [
-    'Ajustes futuros precificados por complexidade.',
-    'Possibilidade de pagamento único ou distribuído nas parcelas restantes.',
+    'Manutenções futuras avaliadas conforme complexidade e necessidade da operação.',
+    'Possibilidade de plano mensal de suporte e pequenos ajustes a partir de R$ 120,00/mês.',
   ];
 
   return (
@@ -73,11 +73,10 @@ export const Slide04: React.FC = () => {
               <header className="slide04__header">
                 <p className="slide04__eyebrow">Apresentação</p>
                 <h3 className="slide04__title">
-                  Proposta Comercial – ILPI Aconchego dos Avós
+                  Proposta Comercial – Integração Digital TK Twork
                 </h3>
                 <p className="slide04__text">
-                  Valores claros e diluídos para facilitar a contratação e a
-                  sustentação do projeto.
+                  Valores transparentes para estruturar a operação integrada entre Bling, site e Shopee.
                 </p>
 
                 {/* Totais */}
@@ -86,15 +85,14 @@ export const Slide04: React.FC = () => {
                     <p className="slide04__total-label">
                       Valor total do projeto
                     </p>
-                    <p className="slide04__value">R$ 800,00</p>
+                    <p className="slide04__value">R$ 2.400,00</p>
                     <p className="slide04__total-text">
-                      Pagamento dividido para acompanhar a implantação sem pesar
-                      no caixa.
+                      Projeto completo de integração entre Bling, site e Shopee, com mapeamento, configuração e testes.
                     </p>
                   </div>
                   <div className="slide04__installments">
                     <p className="slide04__installments-title">
-                      Pagamento recorrente
+                      Parcelas do projeto
                     </p>
                     <p className="slide04__installments-value">
                       {recorrente.valor}
@@ -150,8 +148,7 @@ export const Slide04: React.FC = () => {
               <div className="slide04__flow">
                 <p className="slide04__flow-title">Fluxo simplificado</p>
                 <p className="slide04__flow-text">
-                  Entrega, publicação e início da cobrança alinhados à data de
-                  go-live para manter previsibilidade.
+                  Implantação, integrações e início da cobrança alinhados à data de go-live da operação integrada.
                 </p>
                 <div className="slide04__flow-tags">
                   <div className="slide04__flow-tag">
